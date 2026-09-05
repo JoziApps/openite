@@ -1,15 +1,24 @@
-# openite
-South Africa’s open space for adult education &amp; creators
+# OpenNites
 
-OpenNites was founded under the Jozi Nites umbrella as a deliberate response to the lack of safe, educational spaces around adult content and services in South Africa.
-Too often these topics are either ignored, sensationalised, or left in the shadows — leaving creators, consumers, survivors, mentors and the broader community without reliable information or community support.
-We exist to change that.
-OpenNites offers:
+Static front-end for OpenNites — Safe nights. Honest talks. Real community.
 
-Educational resources and conversations around health, safety, consent, and wellbeing
-A platform that centres South African creators
-Moderated community spaces where people can learn, share and connect
-Practical information that reduces stigma and increases understanding
+## Deploy on Render (Static Site)
 
-This is not a place for exploitation or empty sensationalism. It is a space built on respect, education, and the belief that adult topics deserve the same care and honesty we give any other part of human life.
-Whether you are a creator, a curious learner, a survivor, a mentor, or simply someone who believes in better conversations — you are welcome here.
+1. Connect the GitHub repo: https://github.com/JoziApps/openite
+2. Set **Root Directory** to the folder containing these files (or leave blank if files are at repo root).
+3. **Build Command**: leave empty (or `echo "static"`).
+4. **Publish Directory**: `.` (or the folder name if nested).
+
+## Local
+
+Open `index.html` in a browser, or use any static server.
+
+## Pages
+
+- `index.html` — Age gate
+- `main.html` — Home
+- `features.html` — Activities + Gallery + Q&A
+- `donate.html` — Support / payments
+- `contact.html` — Contact form (email, WhatsApp, socials)
+
+Assets: `logo.png`, `wall.jpg`, `dark.jpg`, `billboard.jpg`

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activities & Gallery — OpenNites</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="page-bg wall"></div>
+
+  <nav class="nav">
+    <div class="nav-row">
+      <a class="brand" href="main.html"><img src="logo.png" alt="OpenNites"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="main.html">Home</a></li>
+        <li><a href="features.html" aria-current="page">Activities</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="section-tight">
+    <div class="container">
+      <p class="stub-tag">Interactive experiences</p>
+      <h1 style="font-size:clamp(2rem,5vw,3rem);">Activities &amp; Gallery</h1>
+      <p class="muted" style="max-width:54ch;">
+        Original roulette-style and guided activities. Browse, play within your limits, and share if you want.
+      </p>
+    </div>
+  </header>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2>What's on</h2>
+      <div class="stub-grid" id="activity-grid" style="margin-top:1.4rem;"></div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2>Community gallery</h2>
+          <p class="muted mb-0">Photos and captions from people who took part.</p>
+        </div>
+        <button class="btn btn-primary" id="open-gallery-form">Share a photo</button>
+      </div>
+      <div class="gallery-grid" id="gallery-grid" style="margin-top:1.5rem;"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:720px;">
+      <h2>Questions &amp; answers</h2>
+      <div id="qna-list" style="margin-top:1rem;"></div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container center">
+      <a href="donate.html" class="btn btn-primary">Support OpenNites — Buy us a coffee</a>
+    </div>
+  </section>
+
+  <!-- Activity detail modal -->
+  <div class="modal-backdrop" id="activity-modal">
+    <div class="modal" style="max-width:640px;">
+      <button class="modal-close" data-modal-close>&times;</button>
+      <p class="stub-tag" id="am-tag"></p>
+      <h2 id="am-name" style="font-size:1.7rem; margin-bottom:0.5rem;"></h2>
+      <p class="muted" id="am-blurb"></p>
+      <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;"><strong>Source:</strong> <span id="am-source"></span></p>
+      <div class="slide-wrap">
+        <img id="am-photo" src="" alt="">
+        <div class="slide-nav">
+          <button class="btn btn-ghost" id="am-prev" style="padding:0.5rem 1rem;">← Prev</button>
+          <span id="am-counter" class="muted" style="font-size:0.85rem;"></span>
+          <button class="btn btn-ghost" id="am-next" style="padding:0.5rem 1rem;">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery submit modal -->
+  <div class="modal-backdrop" id="gallery-modal">
+    <div class="modal">
+      <button class="modal-close" data-modal-close>&times;</button>
+      <h2 style="font-size:1.5rem; margin-bottom:1rem;">Share a photo</h2>
+      <form id="gallery-form">
+        <div class="form-group">
+          <label for="g-who">Name (or leave blank for Anonymous)</label>
+          <input type="text" id="g-who" placeholder="Your name or nickname">
+        </div>
+        <div class="form-group">
+          <label for="g-caption">Caption</label>
+          <textarea id="g-caption" placeholder="What was the experience like?" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="g-img">Image URL (for now)</label>
+          <input type="url" id="g-img" placeholder="https://..." required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Post to gallery</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>OpenNites</h4>
+          <p>Safe nights. Honest talks. Real community.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="main.html">Home</a>
+          <a href="features.html">Activities</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="https://chat.whatsapp.com/KIexIlcALXF8CAtq1VY6f8" target="_blank" rel="noopener">WhatsApp Group</a>
+          <a href="https://fetlife.com/JoziNite_Crew" target="_blank" rel="noopener">FetLife Crew</a>
+          <a href="https://tag-it-sigma.vercel.app" target="_blank" rel="noopener">Tag-It</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="mailto:jozinites011@gmail.com">jozinites011@gmail.com</a>
+          <a href="contact.html">Contact form</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 OpenNites / Jozi Nites</span>
+        <span>18+ only</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

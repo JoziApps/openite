@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — OpenNites</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <div class="page-bg wall"></div>
+
+  <nav class="nav">
+    <div class="nav-row">
+      <a class="brand" href="main.html"><img src="logo.png" alt="OpenNites"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="main.html">Home</a></li>
+        <li><a href="features.html">Activities</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="section-tight">
+    <div class="container">
+      <p class="stub-tag">Get in touch</p>
+      <h1 style="font-size:clamp(2rem,5vw,2.8rem);">Contact us</h1>
+      <p class="muted">Questions, suggestions, activity ideas, or just hello. You can stay anonymous.</p>
+    </div>
+  </header>
+
+  <section class="section-tight">
+    <div class="container" style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:2rem; align-items:start;">
+      <div class="card">
+        <h3 style="margin-bottom:1rem;">Send us a message</h3>
+        <form id="contact-form">
+          <div class="checkline" style="margin-bottom:1.1rem;">
+            <input type="checkbox" id="c-anon">
+            <label for="c-anon">Submit anonymously</label>
+          </div>
+
+          <div id="identity-fields">
+            <div class="form-group">
+              <label for="c-name">Name / Nickname</label>
+              <input type="text" id="c-name" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email</label>
+              <input type="email" id="c-email" placeholder="you@email.com">
+            </div>
+            <div class="form-group">
+              <label for="c-whatsapp">WhatsApp number</label>
+              <input type="tel" id="c-whatsapp" placeholder="+27 ...">
+            </div>
+            <div class="form-group">
+              <label for="c-socials">Social handles (optional)</label>
+              <input type="text" id="c-socials" placeholder="@instagram, FetLife, X, etc.">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-subject">Subject</label>
+            <select id="c-subject">
+              <option value="General">General feedback</option>
+              <option value="Activity idea">Activity idea</option>
+              <option value="Bug / issue">Bug or issue</option>
+              <option value="Partnership">Partnership / collab</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="c-image">Image URL (optional)</label>
+            <input type="url" id="c-image" placeholder="https://...">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+          <p id="contact-success" class="muted" style="display:none; margin-top:1rem; color:var(--yellow);">Message received — thank you. We'll get back when we can.</p>
+        </form>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:1rem;">
+          <h3 style="margin-bottom:0.6rem;">Email us</h3>
+          <a href="mailto:jozinites011@gmail.com" style="color:var(--yellow); font-weight:700;">jozinites011@gmail.com</a>
+        </div>
+        <div class="card" style="margin-bottom:1rem;">
+          <h3 style="margin-bottom:0.6rem;">WhatsApp Group</h3>
+          <p class="muted" style="font-size:0.9rem;">Join the community chat.</p>
+          <a href="https://chat.whatsapp.com/KIexIlcALXF8CAtq1VY6f8" class="btn btn-ghost" style="margin-top:0.6rem;" target="_blank" rel="noopener">Join group</a>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:0.6rem;">Also find us</h3>
+          <a href="https://fetlife.com/JoziNite_Crew" target="_blank" rel="noopener" style="display:block; margin-bottom:0.4rem; color:var(--muted);">FetLife — JoziNite Crew</a>
+          <a href="https://tag-it-sigma.vercel.app" target="_blank" rel="noopener" style="display:block; color:var(--muted);">Tag-It</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 800px) {
+      .container[style*="grid-template-columns"] {
+        display: block !important;
+      }
+      .container[style*="grid-template-columns"] > div { margin-bottom: 1.2rem; }
+    }
+  </style>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>OpenNites</h4>
+          <p>Safe nights. Honest talks. Real community.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="main.html">Home</a>
+          <a href="features.html">Activities</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="https://chat.whatsapp.com/KIexIlcALXF8CAtq1VY6f8" target="_blank" rel="noopener">WhatsApp Group</a>
+          <a href="https://fetlife.com/JoziNite_Crew" target="_blank" rel="noopener">FetLife Crew</a>
+          <a href="https://tag-it-sigma.vercel.app" target="_blank" rel="noopener">Tag-It</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="mailto:jozinites011@gmail.com">jozinites011@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 OpenNites / Jozi Nites</span>
+        <span>18+ only</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
